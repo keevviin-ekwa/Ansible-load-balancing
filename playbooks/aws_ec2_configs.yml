@@ -1,0 +1,7 @@
+region_name: us-east-1 # Change this to your region
+instance_type: t2.micro # Change this to your instance type
+ami: ami-0866a3c8686eaeeba # Change this to your AMI
+key_pair: NewKeyPair # Change this to your key pair
+count: 2 # Change this to the number of instances you want to launch
+sg_name: launch-wizard-7 # Change this to your security group name
+instance_name: ansible-controller # Change this to your instance name

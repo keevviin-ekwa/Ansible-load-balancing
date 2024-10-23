@@ -1,0 +1,18 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Installing Apache Server
+      apt:
+        name: apache2
+        state: present
+
+    - name: Copying index.html file from Master to Managed Node
+      copy:
+        src: ../index.html
+        dest: /var/www/html
+        mode: '666'
+
+    - name: Starting Apache service
+      service:
+        name: apache2
+        state: started
